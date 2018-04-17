@@ -1,12 +1,15 @@
 class SessionsController < ApplicationController
-  before_action :require_login
 
   def new
   end
 
   def create
+    if session[:username].nil? || session[:username].empty?
+      redirect_to new_session_path
+    else
     session[:username] = params[:username]
-    redirect to '/'
+    redirect to show_secret_path
+    end
   end
 
 

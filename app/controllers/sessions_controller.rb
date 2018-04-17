@@ -5,10 +5,10 @@ class SessionsController < ApplicationController
 
   def create
     if session[:name].nil? || session[:name].empty?
-      redirect_to '/'
+      redirect_to login_path
     else
     session[:name] = params[:name]
-    redirect to secret_path
+    redirect to '/'
     end
   end
 

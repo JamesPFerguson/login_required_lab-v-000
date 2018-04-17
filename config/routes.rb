@@ -60,4 +60,6 @@ Rails.application.routes.draw do
 
   get 'sessions/new', to: 'sessions#new', as: 'login'
 
+  get 'secrets/show'
+
 end

@@ -1,13 +1,17 @@
 class SessionsController < ApplicationController
   before_action :require_login
 
-
-
-
-
-
-
-  def require_login
-    return head(:forbidden) unless session.include? :user_id
+  def new
   end
+
+  def create
+    session[:username] = params[:username]
+    redirect to '/'
+  end
+
+
+
+
+
+
 end

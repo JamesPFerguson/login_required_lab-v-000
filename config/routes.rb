@@ -56,7 +56,7 @@ Rails.application.routes.draw do
 
   get 'secrets/new'
 
-  root 'application#hello'
+  root 'sessions#new'
   get 'login', to: 'session#new'
   post 'login', to: 'sessions#create'
   post 'logout', to: 'sessions#destroy'

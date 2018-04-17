@@ -62,4 +62,8 @@ Rails.application.routes.draw do
 
   get 'secrets/show'
 
+  get 'sessions/destroy'
+
+  post 'sessions/destroy'
+
 end

@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
       redirect_to login_path
     else
     session[:username] = params[:username]
-    redirect to show_secret_path
+    redirect to secret_path
     end
   end
 

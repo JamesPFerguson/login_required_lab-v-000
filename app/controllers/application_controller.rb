@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
 
 
   def require_login
-    redirect_to 'sessions/new' unless session.include? :user_id
+    redirect_to 'sessions/new' unless current_user
   end
 
   def current_user

@@ -58,6 +58,6 @@ Rails.application.routes.draw do
 
   post 'sessions/create', to: 'sessions#create'
 
-  get 'sessions/new', to: 'sessions#new' as: 'login'
+  get 'sessions/new', to: 'sessions#new' as: :login
 
 end

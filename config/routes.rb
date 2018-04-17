@@ -54,5 +54,6 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
 
-  post 'sessions/destroy'
+  post 'logout', to: 'sessions#destroy'
+
 end
